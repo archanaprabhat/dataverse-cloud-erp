@@ -2,16 +2,10 @@ import Image from "next/image";
 
 export default function Marquee() {
   const logos = [
-    "/logos/1.svg",
-    "/logos/2.svg",
-    "/logos/3.svg",
-    "/logos/4.svg",
-    "/logos/5.svg",
-    "/logos/1.svg", // Repeat for seamless loop
-    "/logos/2.svg",
-    "/logos/3.svg",
-    "/logos/4.svg",
-    "/logos/5.svg",
+    "/logos/1.svg", "/logos/2.svg", "/logos/3.svg", "/logos/4.svg", "/logos/5.svg",
+    "/logos/1.svg", "/logos/2.svg", "/logos/3.svg", "/logos/4.svg", "/logos/5.svg",
+    "/logos/1.svg", "/logos/2.svg", "/logos/3.svg", "/logos/4.svg", "/logos/5.svg",
+    "/logos/1.svg", "/logos/2.svg", "/logos/3.svg", "/logos/4.svg", "/logos/5.svg",
   ];
 
   return (

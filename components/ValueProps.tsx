@@ -40,8 +40,8 @@ export default function ValueProps() {
                             </div>
                             
                             <div className="flex flex-col gap-2">
-                                <h4 className="text-xl font-medium text-mistral-dark dark:text-white">{item.title}</h4>
-                                <p className="text-gray-600 dark:text-gray-300 leading-relaxed font-light">{item.desc}</p>
+                                <h4 className="text-xl font-medium text-mistral-dark dark:text-black">{item.title}</h4>
+                                <p className="text-black dark:text-black leading-relaxed font-light">{item.desc}</p>
                             </div>
                         </div>
                     ))}
