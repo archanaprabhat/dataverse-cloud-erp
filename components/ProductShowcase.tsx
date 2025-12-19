@@ -57,32 +57,40 @@ export default function ProductShowcase() {
                  </div>
 
                  {/* Sticky Center Content */}
-                 <div className="sticky top-1/2 -translate-y-1/2 z-10 w-full max-w-screen-xl mx-auto px-6">
+                 <div className="sticky top-1/2 -translate-y-1/2 z-10 w-full max-w-7xl mx-auto px-6">
                     
-                    {/* Float Item 1 (Left) */}
-                    <div className="absolute top-1/2 left-[5%] md:left-[10%] -translate-y-1/2 w-48 md:w-64 aspect-square animate-float-1 z-20">
-                        <Image src="/float-1.png" alt="Data Analytics" fill className="object-contain drop-shadow-2xl" />
+                    {/* Pinterest Layout Floating Images */}
+                    
+                    {/* Image 1: Top Left - Staggered */}
+                    <div className="absolute -top-32 left-[5%] md:left-[10%] w-40 md:w-56 aspect-square animate-float-1 z-20">
+                        <Image src="/float-1.png" alt="Data Analytics" fill className="object-contain drop-shadow-2xl rounded-lg" />
                     </div>
 
-                    {/* Float Item 2 (Right) */}
-                    <div className="absolute top-1/2 right-[5%] md:right-[10%] -translate-y-1/2 w-48 md:w-64 aspect-square animate-float-2 z-20">
-                        <Image src="/float-2.png" alt="Code Algorithm" fill className="object-contain drop-shadow-2xl" />
+                    {/* Image 2: Middle Right - Staggered */}
+                    <div className="absolute top-0 right-[5%] md:right-[12%] w-48 md:w-64 aspect-video animate-float-2 z-20 delay-100">
+                        <Image src="/float-2.png" alt="Code Algorithm" fill className="object-contain drop-shadow-2xl rounded-lg" />
                     </div>
 
-                     {/* Float Item 3 (Bottom Center - subtly behind text or just below) */}
-                    <div className="absolute top-[80%] left-1/2 -translate-x-1/2 w-40 md:w-56 aspect-square animate-float-3 z-0 opacity-80">
-                         <Image src="/float-3.png" alt="AI Core" fill className="object-contain drop-shadow-xl" />
+                     {/* Image 3: Bottom Center - Staggered */}
+                    <div className="absolute top-48 left-1/2 -translate-x-1/2 w-32 md:w-48 aspect-square animate-float-3 z-0">
+                         <Image src="/float-3.png" alt="AI Core" fill className="object-contain drop-shadow-xl opacity-80" />
                     </div>
 
-                    <div className="relative z-30">
-                        <h2 className="text-5xl lg:text-8xl font-semibold tracking-tighter mb-6 transition-colors duration-500">
-                            <span className="bg-clip-text text-transparent bg-gradient-to-r from-mistral-orange to-mistral-orange bg-[length:0%_100%] bg-no-repeat animate-reveal-text text-black/10 dark:text-white/10">
+                    <div className="relative z-30 flex flex-col items-center gap-4">
+                        {/* Main Sticky Tagline */}
+                        <h2 className="text-4xl lg:text-7xl font-normal text-mistral-dark dark:text-black tracking-tight mb-2">
+                            Unified data for all your work.
+                        </h2>
+
+                        {/* Animated Reveal Sub-headline */}
+                        <h3 className="text-3xl lg:text-5xl font-semibold tracking-tighter transition-colors duration-500">
+                            <span className="bg-clip-text text-transparent bg-linear-to-r from-mistral-orange to-mistral-orange bg-size-[0%_100%] bg-no-repeat animate-reveal-text text-black/10 dark:text-white/10">
                                 Get the job done faster.
                             </span>
-                        </h2>
+                        </h3>
                         
-                        <p className="text-xl font-light text-gray-700 dark:text-gray-300 max-w-2xl mx-auto mt-8 opacity-0 animate-fade-in-up delay-300">
-                           Your multilingual, multimodal Data assistant that can help with anything. Search, analyze, code, learning, automate, and collaborate.
+                        <p className="text-lg font-light text-gray-600 dark:text-gray-400 max-w-xl mx-auto mt-6 opacity-0 animate-fade-in-up delay-200">
+                           Your multilingual, multimodal Data assistant that can help with anything.
                         </p>
                     </div>
                  </div>
@@ -95,7 +103,7 @@ export default function ProductShowcase() {
                     .animate-reveal-text {
                         animation: reveal 1s linear forwards;
                         animation-timeline: view();
-                        animation-range: entry 45% cover 55%;
+                        animation-range: entry 50% cover 50%;
                     }
 
                     @keyframes fadeInUp {
@@ -108,35 +116,35 @@ export default function ProductShowcase() {
                         animation-range: entry 50% cover 60%;
                     }
                     
-                    /* Parallax Floating Animations */
-                    @keyframes floatInLeft {
-                        from { transform: translateX(-150px) translateY(100px) rotate(-15deg) scale(0.8); opacity: 0; }
-                        to { transform: translateX(0) translateY(-50%) rotate(-6deg) scale(1); opacity: 1; }
+                    /* Pinterest-style Staggered Float Animations */
+                    @keyframes floatInTopLeft {
+                        from { transform: translate(-100px, -100px) rotate(-10deg); opacity: 0; }
+                        to { transform: translate(0, 0) rotate(-6deg); opacity: 1; }
                     }
                     .animate-float-1 {
-                        animation: floatInLeft 1s ease-out forwards;
+                        animation: floatInTopLeft 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+                        animation-timeline: view();
+                        animation-range: entry 20% cover 40%;
+                    }
+
+                    @keyframes floatInRight {
+                        from { transform: translate(100px, 50px) rotate(10deg); opacity: 0; }
+                        to { transform: translate(0, 0) rotate(6deg); opacity: 1; }
+                    }
+                    .animate-float-2 {
+                        animation: floatInRight 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
                         animation-timeline: view();
                         animation-range: entry 20% cover 45%;
                     }
 
-                    @keyframes floatInRight {
-                        from { transform: translateX(150px) translateY(100px) rotate(15deg) scale(0.8); opacity: 0; }
-                        to { transform: translateX(0) translateY(-50%) rotate(6deg) scale(1); opacity: 1; }
-                    }
-                    .animate-float-2 {
-                        animation: floatInRight 1s ease-out forwards;
-                        animation-timeline: view();
-                        animation-range: entry 25% cover 50%;
-                    }
-
                     @keyframes floatInBottom {
-                         from { transform: translateX(-50%) translateY(150px) scale(0.5); opacity: 0; }
-                        to { transform: translateX(-50%) translateY(0) scale(1); opacity: 1; }
+                         from { transform: translate(-50%, 100px) scale(0.8); opacity: 0; }
+                        to { transform: translate(-50%, 0) scale(1); opacity: 0.9; }
                     }
                     .animate-float-3 {
-                        animation: floatInBottom 1s ease-out forwards;
+                        animation: floatInBottom 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
                         animation-timeline: view();
-                        animation-range: entry 30% cover 55%;
+                        animation-range: entry 30% cover 50%;
                     }
 
                     @keyframes slowParallax {
