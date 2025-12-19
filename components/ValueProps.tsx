@@ -14,7 +14,7 @@ export default function ValueProps() {
        <div className="absolute inset-0 -z-10 size-full overflow-hidden opacity-50">
              <div className="relative h-full w-full">
                 <Image 
-                    src="/dataverse-hero.png" 
+                    src="/mistral-abstract.webp" 
                     alt="Background Abstract" 
                     fill 
                     className="object-cover opacity-60 mix-blend-soft-light"

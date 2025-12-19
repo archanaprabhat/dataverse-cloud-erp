@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -40,11 +42,114 @@ export default function ProductShowcase() {
   return (
     <section className="py-24 bg-background">
       <div className="container mx-auto px-6 lg:px-12">
-        <div className="text-center mb-24">
-             <h2 className="text-4xl lg:text-5xl font-normal text-mistral-dark dark:text-white mb-6">Unified Data for all your work.</h2>
-             <p className="text-xl font-light text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
-                Your multilingual, multimodal Data assistant that can help with anything. Search, analyze, code, learn, automate, and collaborate with a unified and secure experience.
-             </p>
+      <div className="text-center mb-24 relative">
+             {/* Main Scroll Container - Reduced height for less whitespace */}
+             <div className="h-[150vh] relative flex flex-col items-center justify-center overflow-hidden"> 
+                 
+                 {/* Parallax Background Layer */}
+                 <div className="absolute inset-0 z-0">
+                    <Image 
+                        src="/dataverse-parallax-bg.png" 
+                        alt="Background Texture" 
+                        fill 
+                        className="object-cover opacity-40 mix-blend-soft-light animate-parallax-slow" 
+                    />
+                 </div>
+
+                 {/* Sticky Center Content */}
+                 <div className="sticky top-1/2 -translate-y-1/2 z-10 w-full max-w-screen-xl mx-auto px-6">
+                    
+                    {/* Float Item 1 (Left) */}
+                    <div className="absolute top-1/2 left-[5%] md:left-[10%] -translate-y-1/2 w-48 md:w-64 aspect-square animate-float-1 z-20">
+                        <Image src="/float-1.png" alt="Data Analytics" fill className="object-contain drop-shadow-2xl" />
+                    </div>
+
+                    {/* Float Item 2 (Right) */}
+                    <div className="absolute top-1/2 right-[5%] md:right-[10%] -translate-y-1/2 w-48 md:w-64 aspect-square animate-float-2 z-20">
+                        <Image src="/float-2.png" alt="Code Algorithm" fill className="object-contain drop-shadow-2xl" />
+                    </div>
+
+                     {/* Float Item 3 (Bottom Center - subtly behind text or just below) */}
+                    <div className="absolute top-[80%] left-1/2 -translate-x-1/2 w-40 md:w-56 aspect-square animate-float-3 z-0 opacity-80">
+                         <Image src="/float-3.png" alt="AI Core" fill className="object-contain drop-shadow-xl" />
+                    </div>
+
+                    <div className="relative z-30">
+                        <h2 className="text-5xl lg:text-8xl font-semibold tracking-tighter mb-6 transition-colors duration-500">
+                            <span className="bg-clip-text text-transparent bg-gradient-to-r from-mistral-orange to-mistral-orange bg-[length:0%_100%] bg-no-repeat animate-reveal-text text-black/10 dark:text-white/10">
+                                Get the job done faster.
+                            </span>
+                        </h2>
+                        
+                        <p className="text-xl font-light text-gray-700 dark:text-gray-300 max-w-2xl mx-auto mt-8 opacity-0 animate-fade-in-up delay-300">
+                           Your multilingual, multimodal Data assistant that can help with anything. Search, analyze, code, learning, automate, and collaborate.
+                        </p>
+                    </div>
+                 </div>
+
+                <style jsx>{`
+                    @keyframes reveal {
+                        0% { background-size: 0% 100%; color: rgba(0,0,0,0.1); }
+                        100% { background-size: 100% 100%; color: #0f0f0f; }
+                    }
+                    .animate-reveal-text {
+                        animation: reveal 1s linear forwards;
+                        animation-timeline: view();
+                        animation-range: entry 45% cover 55%;
+                    }
+
+                    @keyframes fadeInUp {
+                        from { opacity: 0; transform: translateY(20px); }
+                        to { opacity: 1; transform: translateY(0); }
+                    }
+                    .animate-fade-in-up {
+                        animation: fadeInUp 0.8s ease-out forwards;
+                        animation-timeline: view();
+                        animation-range: entry 50% cover 60%;
+                    }
+                    
+                    /* Parallax Floating Animations */
+                    @keyframes floatInLeft {
+                        from { transform: translateX(-150px) translateY(100px) rotate(-15deg) scale(0.8); opacity: 0; }
+                        to { transform: translateX(0) translateY(-50%) rotate(-6deg) scale(1); opacity: 1; }
+                    }
+                    .animate-float-1 {
+                        animation: floatInLeft 1s ease-out forwards;
+                        animation-timeline: view();
+                        animation-range: entry 20% cover 45%;
+                    }
+
+                    @keyframes floatInRight {
+                        from { transform: translateX(150px) translateY(100px) rotate(15deg) scale(0.8); opacity: 0; }
+                        to { transform: translateX(0) translateY(-50%) rotate(6deg) scale(1); opacity: 1; }
+                    }
+                    .animate-float-2 {
+                        animation: floatInRight 1s ease-out forwards;
+                        animation-timeline: view();
+                        animation-range: entry 25% cover 50%;
+                    }
+
+                    @keyframes floatInBottom {
+                         from { transform: translateX(-50%) translateY(150px) scale(0.5); opacity: 0; }
+                        to { transform: translateX(-50%) translateY(0) scale(1); opacity: 1; }
+                    }
+                    .animate-float-3 {
+                        animation: floatInBottom 1s ease-out forwards;
+                        animation-timeline: view();
+                        animation-range: entry 30% cover 55%;
+                    }
+
+                    @keyframes slowParallax {
+                        from { transform: scale(1.1); }
+                        to { transform: scale(1); }
+                    }
+                    .animate-parallax-slow {
+                        animation: slowParallax 10s ease-out forwards;
+                        animation-timeline: view();
+                        animation-range: entry 0% exit 100%;
+                    }
+                `}</style>
+             </div>
         </div>
 
         <div className="flex flex-col gap-12">
