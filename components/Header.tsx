@@ -44,7 +44,7 @@ export default function Header() {
     >
        {/* Background Overlay for Menu */}
        <div 
-         className={`absolute inset-x-0 top-0 bg-mistral-beige transition-all duration-500 ease-in-out border-b border-white/20 shadow-lg backdrop-blur-xl
+         className={`absolute inset-x-0 top-0 bg-dataverse-beige transition-all duration-500 ease-in-out border-b border-white/20 shadow-lg backdrop-blur-xl
          ${activeMenu ? 'h-[400px] opacity-100' : 'h-0 delay-200 opacity-0 pointer-events-none'}`}
          style={{ background: 'rgba(247, 245, 240, 0.95)' }} // High opacity beige for legibility
        ></div>
@@ -90,9 +90,9 @@ export default function Header() {
             </ul>
 
              <div className="flex items-center gap-3">
-                <Link href="https://console.mistral.ai/" target="_blank" 
+                <Link href="https://console.dataverse.ai/" target="_blank" 
                     className={`relative text-xs font-medium px-4 py-2 rounded transition-all duration-300 flex items-center gap-2 backdrop-blur-sm border 
-                        ${activeMenu ? 'bg-mistral-orange text-white border-transparent hover:bg-mistral-orange/80' : 'bg-white/10 text-white border-white/20 hover:bg-white hover:text-mistral-dark hover:border-transparent'}
+                        ${activeMenu ? 'bg-dataverse-orange text-white border-transparent hover:bg-dataverse-orange/80' : 'bg-white/10 text-white border-white/20 hover:bg-white hover:text-dataverse-dark hover:border-transparent'}
                     group overflow-hidden`}>
                     <span className="relative z-10">Try Data Studio</span>
                      <svg viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-2 h-3 relative z-10 transition-transform duration-300 group-hover:translate-x-1">
@@ -105,7 +105,7 @@ export default function Header() {
                 </Link>
                  <Link href="/contact" 
                     className={`relative text-xs font-medium px-4 py-2 rounded transition-all duration-300 backdrop-blur-sm border 
-                    ${activeMenu ? 'bg-transparent text-black border-black/20 hover:bg-black/5' : 'bg-white/10 text-white border-white/20 hover:bg-white hover:text-mistral-dark hover:border-transparent'} 
+                    ${activeMenu ? 'bg-transparent text-black border-black/20 hover:bg-black/5' : 'bg-white/10 text-white border-white/20 hover:bg-white hover:text-dataverse-dark hover:border-transparent'} 
                     group`}>
                     <span className="relative z-10">Talk to sales</span>
                 </Link>
@@ -120,7 +120,7 @@ export default function Header() {
              <div className="container mx-auto grid grid-cols-4 gap-y-8 gap-x-4 pt-8 border-t border-black/5">
                 {activeMenu && menuItems[activeMenu]?.map((subItem, idx) => (
                     <div key={idx} className="flex flex-col gap-1 group/item cursor-pointer">
-                         <h4 className="text-sm font-semibold text-mistral-dark group-hover/item:text-mistral-orange transition-colors">{subItem.title}</h4>
+                         <h4 className="text-sm font-semibold text-dataverse-dark group-hover/item:text-dataverse-orange transition-colors">{subItem.title}</h4>
                          <p className="text-sm text-gray-500">{subItem.desc}</p>
                     </div>
                 ))}

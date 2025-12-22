@@ -25,7 +25,7 @@ export default function Marquee() {
       {/* Tooltip/Hover Effect Text */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity bg-black text-white text-xs px-3 py-1 rounded flex items-center gap-2">
          Meet our customers 
-         <span className="text-mistral-orange">→</span>
+         <span className="text-dataverse-orange">→</span>
       </div>
     </div>
   );

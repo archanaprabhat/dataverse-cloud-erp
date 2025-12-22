@@ -14,8 +14,8 @@ export default function Footer() {
         <div className="flex flex-col lg:flex-row justify-between gap-16">
             
             <div className="flex flex-col gap-8 w-full lg:w-1/3">
-                 <div className="font-bold text-xl tracking-tighter text-mistral-dark dark:text-white">Dataverse</div>
-                 <p className="text-gray-600 dark:text-gray-400 font-light text-sm max-w-xs">
+                 <div className="font-bold text-xl tracking-tighter text-dataverse-dark">Dataverse</div>
+                 <p className="text-gray-600 font-light text-sm max-w-xs">
                     Dataverse. In your hands.
                  </p>
                  <div className="flex gap-4 items-center">
@@ -29,11 +29,11 @@ export default function Footer() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 w-full lg:w-2/3">
                 {Object.entries(links).map(([category, items]) => (
                     <div key={category} className="flex flex-col gap-4">
-                        <h5 className="font-semibold text-sm text-mistral-dark dark:text-white">{category}</h5>
+                        <h5 className="font-semibold text-sm text-dataverse-dark">{category}</h5>
                         <ul className="flex flex-col gap-2">
                             {items.map(item => (
                                 <li key={item}>
-                                    <Link href="#" className="text-gray-600 dark:text-gray-400 text-sm hover:text-mistral-orange transition-colors">
+                                    <Link href="#" className="text-gray-600 text-sm hover:text-dataverse-orange transition-colors">
                                         {item}
                                     </Link>
                                 </li>

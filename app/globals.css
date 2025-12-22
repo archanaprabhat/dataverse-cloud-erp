@@ -3,19 +3,19 @@
 :root {
   --background: #fffbeb;
   --foreground: #0f0f0f;
-  --mistral-orange: #f5a524;
-  --mistral-beige-dark: #eceacd;
-  --mistral-dark: #0f0f0f;
+  --dataverse-orange: #f5a524;
+  --dataverse-beige-dark: #eceacd;
+  --dataverse-dark: #0f0f0f;
 }
 
-/* Dark mode removed to enforce Mistral text-beige theme */
+/* Dark mode removed to enforce Dataverse text-beige theme */
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-mistral-orange: var(--mistral-orange);
-  --color-mistral-beige-deep: var(--mistral-beige-dark);
-  --color-mistral-dark: var(--mistral-dark);
+  --color-dataverse-orange: var(--dataverse-orange);
+  --color-dataverse-beige-deep: var(--dataverse-beige-dark);
+  --color-dataverse-dark: var(--dataverse-dark);
 
   --font-sans: var(--font-inter);
 

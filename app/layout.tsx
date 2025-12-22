@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Mistral AI | Frontier AI in your hands",
+  title: "Dataverse |  AI for Data Scientists",
   description: "The most powerful AI platform for enterprises.",
 };
 
@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} antialiased bg-[#F7F5F0] dark:bg-[#0F0F0F] text-mistral-dark dark:text-white`}
+        className={`${inter.variable} antialiased bg-[#F7F5F0] text-dataverse-dark`}
       >
         {children}
       </body>

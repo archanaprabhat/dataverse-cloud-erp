@@ -14,7 +14,7 @@ export default function ValueProps() {
        <div className="absolute inset-0 -z-10 size-full overflow-hidden opacity-50">
              <div className="relative h-full w-full">
                 <Image 
-                    src="/mistral-abstract.webp" 
+                    src="/dataverse-abstract.webp" 
                     alt="Background Abstract" 
                     fill 
                     className="object-cover opacity-60 mix-blend-soft-light"
@@ -27,7 +27,7 @@ export default function ValueProps() {
         {/* Sticky Left Column: Heading */}
         <div className="md:w-1/2 relative">
              <div className="md:sticky md:top-1/3 md:h-auto">
-                <h3 className="text-4xl lg:text-6xl font-sans tracking-tight text-mistral-dark dark:text-black font-normal leading-tight">
+                <h3 className="text-4xl lg:text-6xl font-sans tracking-tight text-dataverse-dark font-normal leading-tight">
                     Your Data future belongs in your hands.
                 </h3>
              </div>
@@ -37,11 +37,11 @@ export default function ValueProps() {
         <div className="md:w-1/2 flex flex-col divide-y divide-[#ECDAA2] border-y border-y-[#ECDAA2]">
              {items.map((item, idx) => (
                 <div key={idx} className="flex flex-col py-16 gap-6">
-                    <h4 className="text-2xl font-normal text-mistral-dark dark:text-black">{item.title}</h4>
+                    <h4 className="text-2xl font-normal text-dataverse-dark">{item.title}</h4>
                     
                     <div className="flex gap-6 items-start">
                          {/* Icon */}
-                        <div className="text-mistral-orange shrink-0 mt-1">
+                        <div className="text-dataverse-orange shrink-0 mt-1">
                             <svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M21.0039 10.9983L21.0039 8.00293L18.0086 8.00293L18.0086 10.9983L21.0039 10.9983Z" fill="currentColor"/>
                                 <path d="M18.0117 7.99143L18.0117 4.99609L15.0164 4.99609L15.0164 7.99143L18.0117 7.99143Z" fill="currentColor"/>
@@ -51,7 +51,7 @@ export default function ValueProps() {
                                 <path d="M15.0117 17.0002L15.0117 14.0049L12.0164 14.0049L12.0164 17.0002L15.0117 17.0002Z" fill="currentColor"/>
                             </svg>
                         </div>
-                        <p className="text-lg font-light text-black/80 dark:text-black leading-relaxed">
+                        <p className="text-lg font-light text-black/80 leading-relaxed">
                             {item.desc}
                         </p>
                     </div>
