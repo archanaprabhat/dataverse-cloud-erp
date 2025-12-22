@@ -11,7 +11,7 @@ export default function Hero() {
             
             {/* Left Content Area - Empty top left matching image composition */}
             <div className="flex flex-col items-start text-left gap-8 max-w-2xl">
-                 <h1 className="text-mistral-dark dark:text-white text-5xl md:text-7xl font-sans tracking-tight leading-tight flex flex-wrap gap-x-3">
+                 <h1 className="text-mistral-dark text-5xl md:text-7xl font-sans tracking-tight leading-tight flex flex-wrap gap-x-3">
                      {text.split(" ").map((word, wordIndex) => (
                         <span key={wordIndex} className="inline-block whitespace-nowrap">
                           {word.split("").map((char, charIndex) => (
@@ -27,17 +27,17 @@ export default function Hero() {
                      ))}
                  </h1>
 
-                <p className="text-gray-600 dark:text-gray-300 text-xl font-light opacity-0 animate-title delay-300 max-w-lg" style={{ animationFillMode: 'forwards' }}>
+                <p className="text-gray-600 text-xl font-light opacity-0 animate-title delay-300 max-w-lg" style={{ animationFillMode: 'forwards' }}>
                     Configurable data platform for all businesses.
                 </p>
 
                 {/* Search Input */}
                 <div className="w-full max-w-md opacity-0 animate-[title-reveal_0.8s_ease-out_0.5s_forwards]">
-                    <div className="relative flex items-center bg-white dark:bg-white/10 border border-gray-200 dark:border-white/10 rounded-lg shadow-sm p-1.5 focus-within:ring-2 ring-mistral-orange/50 transition-shadow">
+                    <div className="relative flex items-center bg-white border border-gray-200 rounded-lg shadow-sm p-1.5 focus-within:ring-2 ring-mistral-orange/50 transition-shadow">
                         <input 
                             type="text" 
                             placeholder="Talk to Data Assistant" 
-                            className="grow bg-transparent px-4 py-3 text-mistral-dark dark:text-white placeholder:text-gray-400 outline-none text-base"
+                            className="grow bg-transparent px-4 py-3 text-mistral-dark placeholder:text-gray-400 outline-none text-base"
                         />
                         <button className="bg-mistral-orange hover:bg-mistral-orange/90 text-white rounded-md p-2.5 transition-colors">
                             <svg width="20" height="20" viewBox="0 0 32 32" fill="none" className="rotate-90">
@@ -49,7 +49,7 @@ export default function Hero() {
                 </div>
 
                 <div className="flex flex-wrap items-center gap-6 mt-2 opacity-0 animate-[title-reveal_0.8s_ease-out_0.7s_forwards]">
-                     <Link href="/contact" className="group flex items-center gap-2 text-mistral-dark dark:text-white border-b border-mistral-dark dark:border-white pb-1 hover:opacity-70 transition-opacity">
+                     <Link href="/contact" className="group flex items-center gap-2 text-mistral-dark border-b border-mistral-dark pb-1 hover:opacity-70 transition-opacity">
                         <span className="text-sm font-medium uppercase tracking-wide">Get a demo</span>
                         <svg viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-2 h-3 group-hover:translate-x-1 transition-transform">
                             <path d="M7.39166 4.93066H4.92969V7.39936H7.39166V4.93066Z" fill="currentColor"/>
@@ -59,7 +59,7 @@ export default function Hero() {
                             <path d="M2.46197 9.86133H0V12.33H2.46197V9.86133Z" fill="currentColor"/>
                         </svg>
                     </Link>
-                     <Link href="#" className="group flex items-center gap-2 text-mistral-dark dark:text-white border-b border-mistral-dark dark:border-white pb-1 hover:opacity-70 transition-opacity">
+                     <Link href="#" className="group flex items-center gap-2 text-mistral-dark border-b border-mistral-dark pb-1 hover:opacity-70 transition-opacity">
                         <span className="text-sm font-medium uppercase tracking-wide">Start building</span>
                          <svg viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-2 h-3 group-hover:translate-x-1 transition-transform">
                             <path d="M7.39166 4.93066H4.92969V7.39936H7.39166V4.93066Z" fill="currentColor"/>

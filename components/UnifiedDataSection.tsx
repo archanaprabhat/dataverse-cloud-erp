@@ -78,7 +78,7 @@ export default function UnifiedDataSection() {
                      </h2>
                     
                     {/* Living Text (Reveals) */}
-                     <h2 className="text-5xl lg:text-8xl font-medium tracking-tight mb-4 text-mistral-dark dark:text-black relative">
+                     <h2 className="text-5xl lg:text-8xl font-medium tracking-tight mb-4 text-mistral-dark relative">
                         <motion.span 
                             style={{ width: textReveal1 }}
                             className="absolute top-0 left-0 bottom-0 h-full overflow-hidden whitespace-nowrap text-center mx-auto inset-x-0"
